@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="code files" pattern="file[pointbase-time-track]:*/&amp;&amp;!file[pointbase-time-track]:.idea//*&amp;&amp;!file[pointbase-time-track]:hooks//*&amp;&amp;!file[pointbase-time-track]:plugins//*&amp;&amp;!file[pointbase-time-track]:www/lib//*" />
+</component>

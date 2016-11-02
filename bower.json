@@ -8,7 +8,8 @@
     "ion-md-input": "^1.0.4",
     "ionic-datepicker": "^1.2.1",
     "restangular": "^1.5.2",
-    "lodash": "^4.16.6"
+    "lodash": "^4.16.6",
+    "angular-moment": "^1.0.0"
   },
   "devDependencies": {}
 }
