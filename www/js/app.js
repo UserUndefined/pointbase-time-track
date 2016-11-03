@@ -20,10 +20,36 @@ angular.module('app', ['ionic', 'ngCordova', 'ionic-material', 'ionMdInput', 'io
       //cordovaHTTP.enableSSLPinning(true, function() {console.log('success!');}, function() {console.log('error :(');});
       window.CordovaHttpPlugin.acceptAllCerts(true, function() {console.log('success!');}, function() {console.log('error :(');});
       backgroundGeolocation.configure(locationReceived, locationError, {
+        //desiredAccuracy: 10,
+        //stationaryRadius: 20,
+        //distanceFilter: 30,
+        //interval: 300000,
+        //url: 'https://generic-receiver-api.herokuapp.com/geolocation'
         desiredAccuracy: 10,
         stationaryRadius: 20,
         distanceFilter: 30,
-        interval: 300000
+        url: 'https://generic-receiver-api.herokuapp.com/geolocation',
+        //httpHeaders: { 'X-FOO': 'bar' },
+        maxLocations: 1000,
+        // Android only section
+        locationProvider: backgroundGeolocation.provider.ANDROID_DISTANCE_FILTER_PROVIDER,
+        //interval: 30000,
+        interval: 1800000,
+        fastestInterval: 900000,
+        activitiesInterval: 1800000,
+        notificationTitle: 'Background tracking',
+        notificationText: 'enabled',
+        notificationIconColor: '#FEDD1E',
+        notificationIconLarge: 'mappointer_large',
+        notificationIconSmall: 'mappointer_small',
+        startForeground: true,
+        stopOnTerminate: false,
+        startOnBoot: false,
+        stopOnStillActivity: true,
+        pauseLocationUpdates: false,
+        saveBatteryOnBackground: false,
+        syncUrl: 'https://generic-receiver-api.herokuapp.com/geolocation',
+        syncThreshold: 100
       });
       function locationReceived(location){
         //console.log('location received!!!!');
